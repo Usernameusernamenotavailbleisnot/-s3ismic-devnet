@@ -1,0 +1,37 @@
+# Seismic Auto Deploy and Interact Configuration
+network:
+  name: Seismic devnet
+  chainId: 5124
+  rpcUrl: https://node-2.seismicdev.net/rpc
+  wsUrl: wss://node-2.seismicdev.net/ws
+  explorerUrl: https://explorer-2.seismicdev.net/
+  faucetUrl: https://faucet-2.seismicdev.net/
+
+# Minimum balance threshold for faucet claiming (in ETH)
+minBalance: 0.5
+
+# Faucet service configuration
+faucet:
+  noCaptchaToken: "xxxxxxxxxx"  # Replace with your actual token
+  hcaptchaSiteKey: "0a76a396-7bf6-477e-947c-c77e66a8222e"  # Default sitekey for Seismic faucet
+  faucetDelay: 3000        # Delay between faucet requests (ms)
+  confirmationDelay: 10000 # Delay waiting for faucet tx confirmation (ms)
+  defaultRegion: "sg"      # Default region for proxies (sg, hk, us, uk, etc.)
+
+# Contract deployment configuration
+deploy:
+  count: 1                # Number of contracts to deploy per wallet
+  functionCount: 120      # Number of functions to include in each contract
+  delay: 5000             # Delay between deployments (ms)
+  initialValue: 100       # Initial value for contract constructor
+  skipDeploy: false       # Set to true to skip deployment and use existing contracts
+
+# Contract interaction configuration
+interaction:
+  count: 10               # Number of interactions per contract
+  delay: 1000             # Delay between interactions (ms)
+  randomize: true         # Randomize function selection
+  onlyExisting: false     # Set to true to only interact with existing contracts
+
+# Wallet processing configuration
+walletDelay: 5000         # Delay between processing different wallets

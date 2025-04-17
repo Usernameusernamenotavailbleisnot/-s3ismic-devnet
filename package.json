@@ -1,25 +1,26 @@
 {
-    "name": "s3ismic",
-    "version": "1.0.0",
-    "description": "Automated contract deployment, interaction, and faucet claiming for s3ismic devnet",
-    "main": "src/index.js",
-    "scripts": {
-      "start": "node src/index.js"
-    },
-    "keywords": [
-      "ethereum",
-      "smart-contract"
-    ],
-    "author": "",
-    "license": "MIT",
-    "dependencies": {
-      "ethers": "^6.7.1",
-      "axios": "^1.4.0",
-      "js-yaml": "^4.1.0",
-      "winston": "^3.8.2",
-      "fs-extra": "^11.1.1",
-      "solc": "^0.8.19",
-      "http-proxy-agent": "^7.0.0",
-      "https-proxy-agent": "^7.0.0"
-    }
+  "name": "s3ismic-auto",
+  "version": "1.0.0",
+  "description": "Automated contract deployment, interaction, and faucet claiming for s3ismic devnet",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "interact-only": "node src/interact-only.js"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.7.1",
+    "axios": "^1.4.0",
+    "js-yaml": "^4.1.0",
+    "winston": "^3.8.2",
+    "fs-extra": "^11.1.1",
+    "solc": "^0.8.19",
+    "http-proxy-agent": "^7.0.0",
+    "https-proxy-agent": "^7.0.0"
   }
+}
